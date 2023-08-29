@@ -1,66 +1,100 @@
-.register{
-    width: 100%;
-    height: 100vh;
-    background-color: azure;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .card{
-        .card-header{
-            h3{
-                text-align: center;
-                color: #fff;
-            }
-        }
-        .card-body{
-            .form-group{
-                .form-control{
-                    color: #fff;
-                }
-                &:last-child{
-                    margin-bottom: 0px;
-                }
-                span{
-                    text-align: center;
-                    a{
-                        color: #fff;
-                    }
-                }
-                .file-image{
-                    display: flex;
-                    .image{
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        border : 1px solid rgb(199, 195, 195);
-                        overflow: hidden;
-                        img{
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                    .file{
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        .form-control{
-                            display: none;
-                        }
-                        label{
-                            background-color: #0a0e1585;
-                            padding: 8px;
-                            margin-bottom: 0px;
-                            width: 120px;
-                            text-align: center;
-                            border-radius: 50px;
-                            margin-left: 10px;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
+.register {
+  width: 100%;
+  height: 100vh;
+  background-color: #f0f0f0; /* Updated background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .card {
+    background-color: #fff; /* White card background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    border-radius: 5px;
+
+    .card-header {
+      text-align: center;
+      color: #333; /* Dark text color */
+      font-size: 24px; /* Larger font size */
+      margin-bottom: 20px;
     }
+
+    .card-body {
+      .form-group {
+        margin-bottom: 20px;
+
+        .form-control {
+          background-color: #f5f5f5; /* Light gray input background */
+          color: #333;
+          border: 1px solid #ddd; /* Light gray border */
+          border-radius: 5px;
+          padding: 10px;
+
+          &::placeholder {
+            color: #999; /* Lighter text for placeholders */
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        span {
+          text-align: center;
+
+          a {
+            color: #007bff; /* Blue link color */
+            text-decoration: none;
+
+            &:hover {
+              text-decoration: underline; /* Underline on hover */
+            }
+          }
+        }
+
+        .file-image {
+          display: flex;
+          align-items: center;
+          gap: 20px; /* Spacing between image and input */
+
+          .image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #007bff; /* Blue border */
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .file {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .form-control {
+              display: none;
+            }
+
+            label {
+              background-color: #007bff;
+              color: #fff; /* White text color */
+              padding: 8px 16px; /* More padding */
+              border-radius: 50px;
+              cursor: pointer;
+              transition: background-color 0.3s; /* Smooth transition */
+
+              &:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
