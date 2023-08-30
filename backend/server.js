@@ -2,12 +2,15 @@ const express = require('express');
 const app = express();
 const dotenv = require('dotenv')
 const fileUpload = require('express-fileupload');
+const cors = require('cors');
 
 const databaseConnect = require('./config/database')
 const authRouter = require('./routes/authRoute')
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const messengerRoute = require('./routes/messengerRoute');
+
+app.use(cors());
 
 dotenv.config({
      path : 'backend/config/config.env'
